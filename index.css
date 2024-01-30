@@ -156,8 +156,16 @@ html {
 }
 
 .swiper-slide {
-    width: 18% !important;
+    display: flex !important;
+    width: 35% !important;
     height: 55% !important;
+}
+
+.PicHolder {
+    display: flex !important;
+    position: relative;
+    width: 60% !important;
+    height: 100% !important;
 }
 
 .swiper-slide img {
@@ -182,4 +190,17 @@ html {
     background-position: center;
     width: 100%;
     filter: blur(20px);
+}
+
+.PicDesc {
+    background-color: white;
+    padding: 2vw;
+    width: 60%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.PicDetails {
+    font-size: 1vw;
 }
