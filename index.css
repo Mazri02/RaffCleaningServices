@@ -1,0 +1,185 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    box-shadow: 0px 7px 30px 4px rgba(0, 0, 0, 0.15);
+}
+
+.navbar_detail {
+    padding: 1vh 5vh !important;
+    justify-content: space-between !important;
+}
+
+.navbar-right {
+    justify-content: flex-end !important;
+}
+
+.navbar-header {
+    justify-content: flex-start !important;
+}
+
+.navbar-brand {
+    height: auto;
+    width: 45%;
+}
+
+.nav-link {
+    font-weight: bold;
+}
+
+.Container {
+    height: 200vh;
+}
+
+.CleanPic {
+    background-image: url(Image/About_Us.jpg);
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/*
+.CleanOverlay {
+    position: absolute;
+    height: 100%;
+    width: 47%;
+    background-color: rgba(0,0,0,0.25);
+    z-index: 2;
+}
+*/
+
+.AbText {
+    padding: 0 2%;
+    width: 50%;
+    font-size: 1em;
+}
+
+.AbTitle {
+    font-weight: bold;
+    font-size: 1.65em;
+    line-height: 2.5em;
+}
+
+.Benefits {
+    width: 100%;
+    height: 30%;
+    padding: 2% 0;
+}
+
+.BenIcon {
+    justify-content: center;
+}
+
+.Profile {
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.15);
+    width: 20%;
+    margin: 0 2vh;
+    display: flex;
+    padding: 2vh;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15vh;
+    align-items: center;
+}
+
+.Profile:hover > div {
+    filter: opacity(0%);
+    transition: .2s ease-in;
+}
+
+.Profile:hover {
+    cursor: pointer;
+}
+
+.IconList {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40%;
+    filter: opacity(100%);
+    height: 15vh;
+}
+
+.ExpIcon {
+    background-image: url(Image/Maid.png);
+}
+
+.SoapIcon {
+    background-image: url(Image/star.png);
+}
+
+.ThroughIcon {
+    background-image: url(Image/Soap.png);
+}
+
+.CommitIcon {
+    background-image: url(Image/Commit.png);
+}
+
+.CompleteIcon {
+    background-image: url(Image/Complete.png);
+}
+
+.Desc {
+    filter: opacity(100%);
+    display: flex;
+    font-weight: bold;
+    padding: 1vh 0;
+    justify-content: center;
+}
+
+.Services {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100%;
+    height: 70%;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(221,220,218,1) 50%, rgba(194,194,196,1) 100%);
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    height: 100%;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    width: 18% !important;
+    height: 55% !important;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+.OriginPic {
+    position: absolute;
+    z-index: 2;
+    background-position: center;
+    background-size: cover;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.PicOverlay {
+    background-color: black;
+    position: relative;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    filter: blur(20px);
+}

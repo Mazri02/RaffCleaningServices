@@ -1,0 +1,136 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <!-- JS Swiper-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="Cont">
+    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light navbar_detail">
+        <div class="navbar-header">
+            <img class="navbar-brand" src='./Image/Logo.png' href="#" />
+        </div>
+        <div class="navbar-right">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse navbar-right" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#AboutUs">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Benefits</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="AboutUs" id='AboutUs'>
+        <!--            <div class= "CleanOverlay"></div>-->
+        <div class='CleanPic'>
+            <div class="AbText">
+                <span class='AbTitle'>What is Raff Cleaning Service?</span>
+                <br />
+                Fully integrated janitorial cleaning services company that provides comprehensive, high quality, reliable cleaning solutions to commercial, corporate, industrial and residential clients. We ensure you that our cleaning services are fast efficient, convenient and available all year round to satisfy all your cleaning needs.
+                <br /><br />
+                Ensuring your comfort is our responsibility!
+                <br /><br />
+                <button class="btn btn-primary BookButt">Book Us Now</button> or <b>Contact us through Whatsapp</b>
+            </div>
+        </div>
+    </div>
+    
+    <div class='Services'>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class='OriginPic' style="background-image: url(https://swiperjs.com/demos/images/nature-1.jpg)"></div>
+                    <div class='PicOverlay' style="background-image: url(https://swiperjs.com/demos/images/nature-1.jpg)"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class='OriginPic' style="background-image: url(https://swiperjs.com/demos/images/nature-2.jpg)"></div>
+                    <div class='PicOverlay' style="background-image: url(https://swiperjs.com/demos/images/nature-2.jpg)"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class='OriginPic' style="background-image: url(https://swiperjs.com/demos/images/nature-3.jpg)"></div>
+                    <div class='PicOverlay' style="background-image: url(https://swiperjs.com/demos/images/nature-3.jpg)"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="Container Benefits">
+        <div class="BenIcon d-flex">
+            <div class="Profile">
+                <div class="ExpIcon IconList"></div>
+                <div class="Desc">Experts</div>
+            </div>
+            <div class="Profile">
+                <div class="CommitIcon IconList"></div>
+                <div class="Desc">Committed</div>
+            </div>
+            <div class="Profile">
+                <div class="CompleteIcon IconList"></div>
+                <div class="Desc">Complete</div>
+            </div>
+            <div class="Profile">
+                <div class="SoapIcon IconList"></div>
+                <div class="Desc">Deep Clean</div>
+            </div>
+            <div class="Profile">
+                <div class="ThroughIcon IconList"></div>
+                <div class="Desc">Thorough</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    $('document').ready(function(){
+        $('.swiper-wrapper').css('align-items','center');
+    })
+    
+    $(".nav-item").trigger('click', function() {
+        $(".navbar-nav").children('.navbar-item').removeClass("active")
+        $(this).addClass("active")  
+    })
+
+    var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
+
+</script>
+
+</html>
