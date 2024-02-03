@@ -28,9 +28,11 @@ html {
     font-weight: bold;
 }
 
+/*
 .Container {
     height: 200vh;
 }
+*/
 
 .CleanPic {
     background-image: url(Image/About_Us.jpg);
@@ -69,7 +71,6 @@ html {
 .Benefits {
     width: 100%;
     height: 30%;
-    padding: 2% 0;
 }
 
 .BenIcon {
@@ -77,7 +78,7 @@ html {
 }
 
 .Profile {
-    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.15);
+/*    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.15);*/
     width: 20%;
     margin: 0 2vh;
     display: flex;
@@ -89,10 +90,12 @@ html {
     align-items: center;
 }
 
+/*
 .Profile:hover > div {
     filter: opacity(0%);
     transition: .2s ease-in;
 }
+*/
 
 .Profile:hover {
     cursor: pointer;
@@ -203,4 +206,59 @@ html {
 
 .PicDetails {
     font-size: 1vw;
+}
+
+.ContWeekly {
+    display: flex;
+    flex-direction: row;
+}
+
+.ContWeekly, .ContMoveOut {
+    height: 35%;
+    width: 100%;
+}
+
+.ContMoveOut {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AlignRight {
+    text-align: right;
+}
+
+.OneTime{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.tableHeader {
+    text-align: center;
+}
+
+.WeekTime {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+}
+
+.MoveOutDesc, .WeeklyDesc, .OneTimeDesc {
+    width: 75%;
+}
+.WeeklyDesc {
+    text-align: center
+}
+
+.TablePayment {
+    width: 100%;
+}
+
+.Pricing {
+    text-align: center;
 }
