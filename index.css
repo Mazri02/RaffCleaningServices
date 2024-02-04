@@ -259,6 +259,27 @@ html {
     width: 100%;
 }
 
-.Pricing {
+.PricingTitle,.FAQsTitle {
     text-align: center;
+    font-size: 6vh;
+    font-weight: bold;
+    margin-bottom: 3vh;
+}
+
+.FAQs {
+    width: 70% !important;
+    height: 75%;
+}
+
+.CollapseBtn {
+    text-decoration-line: none;
+}
+
+button.btn-link {
+    font-weight: bold !important;
+    text-decoration: none !important;
+}
+
+#accordion {
+    margin-top: 1vh;
 }
