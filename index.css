@@ -29,7 +29,7 @@ html {
 }
 
 /*
-.Container {
+.container {
     height: 200vh;
 }
 */
@@ -210,7 +210,8 @@ html {
 
 .ContWeekly {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .ContWeekly, .ContMoveOut {
@@ -233,6 +234,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     width: 30%;
 }
 
@@ -259,7 +261,7 @@ html {
     width: 100%;
 }
 
-.PricingTitle,.FAQsTitle {
+.PricingTitle,.FAQsTitle, .TestiTitle {
     text-align: center;
     font-size: 6vh;
     font-weight: bold;
@@ -268,7 +270,8 @@ html {
 
 .FAQs {
     width: 70% !important;
-    height: 75%;
+    display: flex;
+    flex-direction: column;
 }
 
 .CollapseBtn {
@@ -282,4 +285,28 @@ button.btn-link {
 
 #accordion {
     margin-top: 1vh;
+}
+
+.card {
+    margin: 2vh !important;
+}
+
+.Testimonial {
+    display: flex;
+    justify-content: center;
+    margin-top: 4vh;
+}
+
+.TestCont {
+    margin-top: 2vh;
+    text-align: center;
+}
+
+.FeedbackReview, .BeforeAfter {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 50%;
+    height: 100%;
 }
