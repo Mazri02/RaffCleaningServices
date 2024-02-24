@@ -61,19 +61,19 @@ html {
     align-items: center;
 }
 
-/*
 .CleanOverlay {
+    display: none;
     position: absolute;
     height: 100%;
-    width: 47%;
+    width: 100%;
     background-color: rgba(0,0,0,0.25);
     z-index: 2;
 }
-*/
 
 .AbText {
     padding: 0 2%;
     width: 50%;
+    z-index: 3;
     font-size: 1em;
 }
 
@@ -98,7 +98,6 @@ html {
     margin: 0 2vh;
     display: flex;
     padding: 2vh;
-    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     border-radius: 15vh;
@@ -326,8 +325,9 @@ button.btn-link {
     height: 100%;
 }
 
-iframe {
+.FeedbackReview iframe {
     pointer-events: none;
+    width: 95%;
 }
 
 .B4_1, .B4_2, .B4_3, .B4_4, .B4_5, .B4_6 {
@@ -376,9 +376,253 @@ iframe {
 }
 
 .FooterBrand {
-    height: 80px
+    height: 100%;
+    width: 100%;
+    background-image: url(Image/Logo.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.LogonContact {
+    display: flex;
+    width: 15%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    margin-top: 1vh;
 }
 
 .FootDetails {
     padding: 2vw;
+    display: flex;
+    justify-content: center;
+}
+
+.DetailSect {
+    padding: 0 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn-Whatsapp , .btn-Facebook , .btn-Email {
+    padding: 0.85vw 2.5vh !important;
+    border-radius: 2vw !important;
+}
+
+.btn-Whatsapp:hover {
+    box-shadow: 0px 0px 10px 2px rgb(94,196,58,0.45) !important;
+    transition: .2s ease-in;
+}
+
+.btn-Facebook:hover {
+    box-shadow: 0px 0px 10px 2px rgb(60,106,255,0.45) !important;
+    transition: .2s ease-in;
+}
+
+.btn-Email:hover {
+    box-shadow: 0px 0px 10px 2px rgb(231,71,56,0.45) !important;
+    transition: .2s ease-in;
+}
+    
+svg {
+    filter: invert();
+    height: 100%;
+}
+
+.btn-Whatsapp {
+    background-color: #5ec43a !important;
+}
+
+.btn-Facebook {
+    background-color: #3c6aff !important;
+}
+
+.btn-Email {
+    background-color: #e74738 !important;
+}
+
+.BusinessHourTitle {
+    font-weight: bold;
+    margin-bottom: 1vh;
+    padding-bottom: 1vh;
+    width: 60%;
+    border-bottom: 1px solid rgb(0,0,0,0.25);
+}
+
+.LocationSect {
+    padding: 0 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+    .AbText {
+        width: 97%;
+    }
+    
+    .CleanPic {
+        justify-content: center;
+        text-align: left;
+    }
+    
+    .swiper-slide {
+        flex-direction: column;
+        width: 65% !important;
+        height: 65% !important;
+    }
+    
+    .PicHolder, .PicDesc {
+        width: 100% !important;
+    }
+    
+    .PicDesc {
+        padding: 3vw;
+    }
+    
+    .PicDesc b {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .PicDetails {
+        font-size: 1.45vh;    
+    }
+    
+    .Pricing {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .OneTime, .WeekTime, .ContMoveOut {
+        width: 100%;
+        margin-top: 5vh;
+    }
+    
+    .Benefits {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100% !important;
+        height: 60%;
+        margin: 3vh 0;
+        justify-content: center;
+    }
+    
+    .BenIcon {
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 50%;
+    }
+    
+    .Profile {
+        width: 50%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .Testimonial {
+        flex-direction: column;
+    }
+    
+    .FeedbackReview iframe{
+        width: 95%;
+    }
+    
+    .FootDetails {
+        flex-direction: column;
+    }
+    
+    .LocationSect {
+        text-align: left;
+    }
+    
+    .DetailSect {
+        margin: 2vh 0;
+    }
+    
+    .FooterBrand {
+        width: 50%;
+        height: 80px;
+    }
+    
+    .btn-Whatsapp , .btn-Facebook , .btn-Email {
+        height: 6vh;
+    }
+    
+    .LogonContact {
+        width: 100%;
+    }
+    
+    svg {
+        height: 45%;
+        width: 100%;
+    }
+    
+    .Contact {
+        justify-content:flex-start;
+    }
+    
+    .Contact button {
+        margin-right: 2vh;
+    }
+    
+    .FootDetails {
+        margin-top: 3vh;
+    }
+    
+    .PricingTitle,.FAQsTitle, .TestiTitle {
+        font-size: 2.7vh;
+    }
+    
+    .card {
+        margin: 2vh 0;
+    }
+    
+    .FAQs {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+    
+    button.btn-link {
+        text-align: left !important;
+    }
+    
+    .navbar-brand {
+        width: 70%;
+    }
+    
+    .navbar-header {
+        width: 70%;
+    }
+    
+    .navbar {
+        padding: 1vh 2vh !important;
+    }
+    
+    .AbText {
+        font-size: 1.75vh;
+        color: white;
+    }
+    
+    .CleanOverlay {
+        display: block;    
+    }
+    
+    .CleanPic {
+        background-image: url(Image/About_Us_2.jpg);
+    }
+    
+    .CleanPic,.CleanOverlay {
+        height: 85%;
+    }
 }
