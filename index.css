@@ -469,7 +469,7 @@ svg {
 }
 
 /* Animation */
-.mySwiper,.PricingTitle,.OneTime,.WeekTime,.Profile,.ContMoveOut,.FAQsTitle,.animateCard,.TestiTitle {
+.mySwiper,.PricingTitle,.OneTime,.WeekTime,.Profile,.ContMoveOut,.FAQsTitle,.animateCard,.TestiTitle,iframe,.BeforeAfterChild {
     filter: opacity(0);
 }
 

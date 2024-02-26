@@ -364,17 +364,17 @@
         <span class="TestiTitle">What Do People Say About Us?</span>
         <div class="Testimonial">
             <div class="FeedbackReview">
-                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fshera.ann.1%2Fposts%2F10163829430138298&show_text=false" height="239" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fjieha%2Fposts%2F10211393550991836&show_text=true" height="169" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmiow.purr%2Fposts%2F1923301861379250&show_text=false" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                <iframe class='F0' src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fshera.ann.1%2Fposts%2F10163829430138298&show_text=false" height="239" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                <iframe class='F1' src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fjieha%2Fposts%2F10211393550991836&show_text=true" height="169" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                <iframe class='F2' src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmiow.purr%2Fposts%2F1923301861379250&show_text=false" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
             <div class="BeforeAfter">
-                <div class="B4_1"></div>
-                <div class="B4_2"></div>
-                <div class="B4_3"></div>
-                <div class="B4_4"></div>
-                <div class="B4_5"></div>
-                <div class="B4_6"></div>
+                <div class="BeforeAfterChild B4_1"></div>
+                <div class="BeforeAfterChild B4_2"></div>
+                <div class="BeforeAfterChild B4_3"></div>
+                <div class="BeforeAfterChild B4_4"></div>
+                <div class="BeforeAfterChild B4_5"></div>
+                <div class="BeforeAfterChild B4_6"></div>
             </div>
         </div>
     </div>
@@ -570,11 +570,67 @@
             if(currentOffset > TestiTitleOffset){
                 $('.TestiTitle').addClass('animate__animated animate__fadeInUp')
                 $('.TestiTitle').removeClass('animate__fadeOutDown')
+                $('iframe').removeClass('animate__fadeOutLeft');
                 $('.TestiTitle').css('filter','opacity(1)')
+                $('.BeforeAfterChild').removeClass('animate__fadeOut');
 
+                for (var x = 0; x < $('iframe').length; x++) {
+                    (function (index) {
+                        var timer = index * 150;
+
+                        function ProfileVisible() {
+                            $('.F' + index).addClass('animate__animated animate__fadeInLeft');
+                            $('.F' + index).css('filter', 'opacity(1)');
+                        }
+
+                        setTimeout(ProfileVisible, timer);
+                    })(x);
+                }
+                
+                for (var x = 0; x < $('.BeforeAfter').children().length; x++) {
+                    (function (index) {
+                        var timer = index * 350;
+
+                        function ProfileVisible() {
+                            $('.B4_' + (parseInt(index) + 1)).addClass('animate__animated animate__fadeIn');
+                            $('.B4_' + (parseInt(index) + 1)).css('filter', 'opacity(1)');
+                        }
+
+                        setTimeout(ProfileVisible, timer);
+                    })(x);
+                }
             } else {
                 $('.TestiTitle').removeClass('animate__fadeInUp')
                 $('.TestiTitle').addClass('animate__fadeOutDown')
+                $('iframe').removeClass('animate__fadeInLeft');
+                $('.BeforeAfterChild').removeClass('animate__fadeIn');
+                
+                for (var x = 0; x < $('iframe').length; x++) {
+                    (function (index) {
+                        var timer = index * 100;
+                        
+                        function ProfileInvisible() {
+                            $('.F' + index).addClass('animate__fadeOutLeft');
+                            $('.B4_' + (parseInt(index) + 1)).css('filter', 'opacity(0)');
+                        }
+
+                        setTimeout(ProfileInvisible, timer);
+                    })(x);
+                }
+                
+                for (var x = 0; x < $('.BeforeAfter').children().length; x++) {
+                    (function (index) {
+                        var timer = index * 100;
+                        
+                        function ProfileInvisible() {
+                            $('.B4_' + (parseInt(index) + 1)).addClass('animate__fadeOut');
+                            $('.B4_' + (parseInt(index) + 1)).css('filter', 'opacity(0)');
+                            $('.B4_' + (parseInt(index) + 1)).css('transition', '.5s ease-out');
+                        }
+
+                        setTimeout(ProfileInvisible, timer);
+                    })(x);
+                }
             }
         })
     })
