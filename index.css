@@ -474,9 +474,22 @@ svg {
 }
 
 @media only screen and (max-width: 768px) {
+    /* Animation */
+    .mySwiper,.PricingTitle,.OneTime,.WeekTime,.Profile,.ContMoveOut,.FAQsTitle,.animateCard,.TestiTitle,iframe,.BeforeAfterChild {
+        filter: opacity(1);
+    }
+    
+    .CompressTd {
+        display: block;
+    }
+    
   /* For mobile phones: */
     .AbText {
         width: 97%;
+    }
+    
+    .TablePayment tr {
+        margin-bottom: 2vh;
     }
     
     .CleanPic {

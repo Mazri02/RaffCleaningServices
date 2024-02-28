@@ -173,19 +173,19 @@
                         </tr>
                         <tr>
                             <td>1 Maid 4 hours</td>
-                            <td class="AlignRight">100</td>
+                            <td class="AlignRight">120</td>
                         </tr>
                         <tr>
                             <td>2 Maid 2 hours</td>
-                            <td class="AlignRight">100</td>
+                            <td class="AlignRight">120</td>
                         </tr>
                         <tr>
                             <td>Cleaning Tools & Ladder</td>
-                            <td class="AlignRight">50</td>
+                            <td class="AlignRight">30</td>
                         </tr>
                         <tr>
                             <td>Additional Time Per Hour</td>
-                            <td class="AlignRight">25</td>
+                            <td class="AlignRight">20</td>
                         </tr>
                     </table>
                 </span>
@@ -202,11 +202,11 @@
                         </tr>
                         <tr>
                             <td>1 Maid 4 hours</td>
-                            <td class="AlignRight">80</td>
+                            <td class="AlignRight">100</td>
                         </tr>
                         <tr>
                             <td>2 Maid 2 hours</td>
-                            <td class="AlignRight">80</td>
+                            <td class="AlignRight">100</td>
                         </tr>
                     </table>
                     <br />
@@ -225,27 +225,27 @@
                 <table class="TablePayment">
                     <tr class="tableHeader">
                         <th>Services</th>
-                        <th>Room Condition (Square Foot)</th>
+                        <th><span class="CompressTd">Room Condition</span><span class="CompressTd">(Square Foot)</span></th>
                         <th>RM</th>
                     </tr>
                     <tr>
-                        <td>2 Maid 4 hours</td>
+                        <td><span class="CompressTd">2 Maid</span><span class="CompressTd">4 hours</span></td>
                         <td>Small House or Studio (Below 1000)</td>
                         <td class="AlignRight">280</td>
                     </tr>
                     <tr>
-                        <td>2 Maid 6 hours</td>
-                        <td>Apartment or Condo (1000 - 1799)</td>
+                        <td><span class="CompressTd">2 Maid</span><span class="CompressTd">6 hours</span></td>
+                        <td><span class="CompressTd">Apartment or Condo</span><span class="CompressTd">(1000 - 1799)</span></td>
                         <td class="AlignRight">420</td>
                     </tr>
                     <tr>
-                        <td>2 Maid 8 hours</td>
-                        <td>Medium Sized House (1800 - 2499)</td>
+                        <td><span class="CompressTd">2 Maid</span><span class="CompressTd">8 hours</span></td>
+                        <td><span class="CompressTd">Medium Sized House</span><span class="CompressTd">(1800 - 2499)</span></td>
                         <td class="AlignRight">550</td>
                     </tr>
                     <tr>
-                        <td>4 Maid 4 hours</td>
-                        <td>Larger House (2500 - 3500)</td>
+                        <td><span class="CompressTd">4 Maid</span><span class="CompressTd">4 hours</span></td>
+                        <td><span class="CompressTd">Larger House</span><span class="CompressTd">(2500 - 3500)</span></td>
                         <td class="AlignRight">830</td>
                     </tr>
                 </table>
@@ -459,7 +459,8 @@
     });
 
     $('document').ready(function() {
-        $(this).scroll(function() {
+        if($(window).width() > 768){
+            $(this).scroll(function() {
             var currentOffset = $(window).scrollTop();
             var SwiperOffset = parseInt($('.mySwiper').offset().top - 250)
             var PricingOffset = parseInt($('.PricingTitle').offset().top - 250)
@@ -633,6 +634,7 @@
                 }
             }
         })
+        }
     })
 
 </script>
