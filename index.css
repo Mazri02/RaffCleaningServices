@@ -89,7 +89,7 @@ body {
 
 .Benefits {
     width: 100%;
-    height: 30%;
+    height: auto !important;
 }
 
 .BenIcon {
@@ -123,9 +123,9 @@ body {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    width: 40%;
+    width: 100%;
+    height: 10vh;
     filter: opacity(100%);
-    height: 15vh;
 }
 
 .ExpIcon {
@@ -283,7 +283,14 @@ body {
     text-align: center;
     font-size: 6vh;
     font-weight: bold;
-    margin-bottom: 3vh;
+    margin: 3vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.SubPricingTitle, .SubFAQsTitle, .SubTestiTitle {
+    font-size: 3vh;
+    font-weight: 100;
 }
 
 .FAQs {
@@ -329,9 +336,14 @@ button.btn-link {
     height: 100%;
 }
 
-.FeedbackReview iframe {
-    pointer-events: none;
+.FeedbackReview {
+    margin: 2vh 3vh;
     width: 95%;
+}
+
+.LittleTitle {
+    font-size: 2vh;
+    text-align: center;
 }
 
 .B4_1, .B4_2, .B4_3, .B4_4, .B4_5, .B4_6 {
@@ -386,6 +398,12 @@ button.btn-link {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.ClientSVG {
+    height: auto;
+    fill:blue;
+    filter: none;
 }
 
 .LogonContact {
@@ -448,8 +466,60 @@ svg {
     background-color: #3c6aff !important;
 }
 
+.ContainerReview {
+    display: flex;
+    width: 100%;
+    margin: 2vh 0;
+    padding: 3vh 5vh; 
+    border: 1px solid black;
+    border-radius: 5vh;
+    box-shadow: 0px 0px 22px 4px rgba(0,0,0,0.10);
+    height: 100%;
+}
+
+.Pict1 {
+    background-image: url(https://scontent.fkul16-1.fna.fbcdn.net/v/t39.30808-1/312547631_10162583005718298_6772965298303176762_n.jpg?stp=dst-jpg_s200x200&_nc_cat=101&ccb=1-7&_nc_sid=11e7ab&_nc_eui2=AeG_VQ4gb0LmvpdXZ67WijvNGB0xnXfMOxAYHTGdd8w7EESITiGFZMtQnA_vUuGarmFbk3B2fEcO8GDycrPLwTQ1&_nc_ohc=J6UKYJNh3lEAX-9rRjl&_nc_ht=scontent.fkul16-1.fna&oh=00_AfBdlQ1a3Nld0vFFhPaULXOFROkVzkLDyqD302gjC3cKNA&oe=65E7197B);
+}
+
+.Pict2 {
+    background-image: url(https://scontent.fkul16-2.fna.fbcdn.net/v/t1.6435-1/187114450_10208911763348696_2194355204489858810_n.jpg?stp=dst-jpg_p200x200&_nc_cat=108&ccb=1-7&_nc_sid=2b6aad&_nc_eui2=AeGG_vAFWLTs7tHunhIX1V3j6uPfGTda6Trq498ZN1rpOgbHXkTbng1Sx3KgICxAU5IT9TVILgmGkGOtvsMivPal&_nc_ohc=peNmU_3XL-sAX_9VakQ&_nc_ht=scontent.fkul16-2.fna&oh=00_AfA_lJBW9OySNEgBsAIpNPoviosVhp3qY4JBkVyPqjwaKQ&oe=66095430);
+}
+
+.Pict3 {
+    background-image: url(https://scontent.fkul16-2.fna.fbcdn.net/v/t1.18169-9/17308697_388831971492921_4819508368214000053_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=300f58&_nc_eui2=AeFlWo1YDSL18h82fF6qNi-FI8fMIEgEnSkjx8wgSASdKc84i0yEa6KP3fentjmgZ6n8LzqKQ6qtLPbQLCJApjdy&_nc_ohc=BkrZoqn6iWoAX8WO5Gn&_nc_ht=scontent.fkul16-2.fna&oh=00_AfAnjj3Ta0Z6Rgm29fxniXe3LjtlDLJXvwo6Jf8LmcY9BA&oe=66092F85)
+}
+
+.ProfilePict {
+    width: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 15vh;
+}
+
+.DescSubTitle {
+    font-size: 1.85vh;
+}
+
+.DescTitle {
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+.ClientComment {
+    margin: 2vh 0 !important;
+    font-size: 2vh;
+}
+
+.DescClient {
+    padding: 0 3vh;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
 .btn-Email {
-    background-color: #e74738 !important;
+    background-color: #db2bca !important;
 }
 
 .BusinessHourTitle {
@@ -469,13 +539,13 @@ svg {
 }
 
 /* Animation */
-.mySwiper,.PricingTitle,.OneTime,.WeekTime,.Profile,.ContMoveOut,.FAQsTitle,.animateCard,.TestiTitle,iframe,.BeforeAfterChild {
+.mySwiper,.PricingTitle,.OneTime,.WeekTime,.Profile,.ContMoveOut,.FAQsTitle,.animateCard,.TestiTitle,.ContainerReview,.BeforeAfterChild {
     filter: opacity(0);
 }
 
 @media only screen and (max-width: 768px) {
     /* Animation */
-    .mySwiper,.PricingTitle,.OneTime,.WeekTime,.Profile,.ContMoveOut,.FAQsTitle,.animateCard,.TestiTitle,iframe,.BeforeAfterChild {
+    .mySwiper,.PricingTitle,.OneTime,.WeekTime,.Profile,.ContMoveOut,.FAQsTitle,.animateCard,.TestiTitle,.ContainerReview,.BeforeAfterChild {
         filter: opacity(1);
     }
     
@@ -492,6 +562,11 @@ svg {
         margin-bottom: 2vh;
     }
     
+    .LittleTitle {
+        width: 70%;
+        padding: 1vh 2vh;
+    }
+    
     .CleanPic {
         justify-content: center;
         text-align: left;
@@ -501,6 +576,14 @@ svg {
         flex-direction: column;
         width: 65% !important;
         height: 65% !important;
+    }
+    
+    .ExtraDetail {
+        text-align: left !important;
+    }
+    
+    .SubPricingTitle, .SubFAQsTitle, .SubTestiTitle {
+        font-size: 2vh;
     }
     
     .PicHolder, .PicDesc {
@@ -520,6 +603,14 @@ svg {
         font-size: 1.45vh;    
     }
     
+    .headerService {
+        text-align: left;
+    }
+    
+    .headerPricing {
+        text-align: right;
+    }
+    
     .Pricing {
         display: flex;
         flex-direction: column;
@@ -534,25 +625,38 @@ svg {
         display: flex;
         flex-wrap: wrap;
         width: 100% !important;
-        height: 60%;
         margin: 3vh 0;
         justify-content: center;
     }
     
     .BenIcon {
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
         height: 50%;
     }
     
+    .Profile:nth-child(odd){
+        flex-direction: row-reverse
+    }
+    
     .Profile {
-        width: 50%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
         padding: 0;
-        margin: 0;
+        margin: 2vh 0;
+    }
+    
+    .ProfilePict {
+        display: none;
+    }
+    
+    .ClientLink a svg{
+        width: 3vh;
     }
     
     .Testimonial {
         flex-direction: column;
+        margin: 0;
     }
     
     .FeedbackReview iframe{
