@@ -277,6 +277,7 @@ body {
 
 .TablePayment {
     width: 100%;
+    font-size: 2.5vh;
 }
 
 .PricingTitle,.FAQsTitle, .TestiTitle {
@@ -562,6 +563,10 @@ svg {
         margin-bottom: 2vh;
     }
     
+    .TablePayment,.ExtraDetail {
+        font-size: 0.8em;
+    }
+    
     .LittleTitle {
         width: 70%;
         padding: 1vh 2vh;
@@ -579,11 +584,11 @@ svg {
     }
     
     .ExtraDetail {
-        text-align: left !important;
+        text-align: left !important;     
     }
     
     .SubPricingTitle, .SubFAQsTitle, .SubTestiTitle {
-        font-size: 2vh;
+        font-size: 1.85vh;
     }
     
     .PicHolder, .PicDesc {
@@ -719,8 +724,9 @@ svg {
         width: 100% !important;
     }
     
-    button.btn-link {
+    button.btn-link,.card-body {
         text-align: left !important;
+        font-size: 2vh;
     }
     
     .navbar-brand {
