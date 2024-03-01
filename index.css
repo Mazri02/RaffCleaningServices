@@ -282,7 +282,7 @@ body {
 
 .PricingTitle,.FAQsTitle, .TestiTitle {
     text-align: center;
-    font-size: 6vh;
+    font-size: 2em;
     font-weight: bold;
     margin: 3vh;
     display: flex;
@@ -290,7 +290,7 @@ body {
 }
 
 .SubPricingTitle, .SubFAQsTitle, .SubTestiTitle {
-    font-size: 3vh;
+    font-size: 0.9em;
     font-weight: 100;
 }
 
@@ -339,11 +339,10 @@ button.btn-link {
 
 .FeedbackReview {
     margin: 2vh 3vh;
-    width: 95%;
 }
 
 .LittleTitle {
-    font-size: 2vh;
+    font-size: 0.9em;
     text-align: center;
 }
 
@@ -559,6 +558,10 @@ svg {
         width: 97%;
     }
     
+    .FeedbackReview {
+        margin: 0;
+    }
+    
     .TablePayment tr {
         margin-bottom: 2vh;
     }
@@ -651,6 +654,10 @@ svg {
         margin: 2vh 0;
     }
     
+    .ContainerReview {
+        padding: 2vh;
+    }
+    
     .ProfilePict {
         display: none;
     }
@@ -662,10 +669,6 @@ svg {
     .Testimonial {
         flex-direction: column;
         margin: 0;
-    }
-    
-    .FeedbackReview iframe{
-        width: 95%;
     }
     
     .FootDetails {
@@ -711,7 +714,7 @@ svg {
     }
     
     .PricingTitle,.FAQsTitle, .TestiTitle {
-        font-size: 2.7vh;
+        font-size: 1.35em;
     }
     
     .card {
@@ -726,7 +729,7 @@ svg {
     
     button.btn-link,.card-body {
         text-align: left !important;
-        font-size: 2vh;
+        font-size: 0.9em;
     }
     
     .navbar-brand {
@@ -742,7 +745,7 @@ svg {
     }
     
     .AbText {
-        font-size: 1.75vh;
+        font-size: 0.9em;
     }
     
     .CleanOverlay {
@@ -754,6 +757,10 @@ svg {
     }
     
     .CleanPic,.CleanOverlay {
-        height: 85%;
+        height: 75%;
+    }
+    
+    .DetailSect, .LocationSect {
+        font-size: 0.9em;
     }
 }
