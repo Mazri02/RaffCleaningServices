@@ -78,13 +78,10 @@ body {
     padding: 0 2%;
     width: 50%;
     z-index: 3;
-    font-size: 1em;
 }
 
 .AbTitle {
     font-weight: bold;
-    font-size: 1.65em;
-    line-height: 2.5em;
 }
 
 .Benefits {
@@ -156,14 +153,32 @@ body {
     justify-content: center;
 }
 
+.PicDesc {
+    font-size: 2.05vh !important;
+}
+
+.AbText, .TablePayment, .LittleTitle, .btn-link, .card-body, .ClientComment {
+    font-size: 2vh !important;
+}
+
+.SubFAQsTitle,.SubPricingTitle,.SubTestiTitle{
+    font-size: 3vh !important;
+}
+
+.FAQsTitle, .PricingTitle, .TestiTitle,.AbTitle {
+    font-size: 4vh;
+}
+
 .Services {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     width: 100%;
     height: 70%;
+/*
     background: rgb(255, 255, 255);
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(221,220,218,1) 50%, rgba(194,194,196,1) 100%);
+*/
 }
 
 .swiper {
@@ -222,10 +237,6 @@ body {
     z-index: 2;
 }
 
-.PicDetails {
-    font-size: 1vw;
-}
-
 .ContWeekly {
     display: flex;
     flex-direction: column;
@@ -277,12 +288,10 @@ body {
 
 .TablePayment {
     width: 100%;
-    font-size: 2.5vh;
 }
 
 .PricingTitle,.FAQsTitle, .TestiTitle {
     text-align: center;
-    font-size: 2em;
     font-weight: bold;
     margin: 3vh;
     display: flex;
@@ -290,8 +299,7 @@ body {
 }
 
 .SubPricingTitle, .SubFAQsTitle, .SubTestiTitle {
-    font-size: 0.9em;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 .FAQs {
@@ -342,7 +350,6 @@ button.btn-link {
 }
 
 .LittleTitle {
-    font-size: 0.9em;
     text-align: center;
 }
 
@@ -497,18 +504,12 @@ svg {
     height: 15vh;
 }
 
-.DescSubTitle {
-    font-size: 1.85vh;
-}
-
 .DescTitle {
-    font-size: 3vh;
     font-weight: bold;
 }
 
 .ClientComment {
     margin: 2vh 0 !important;
-    font-size: 2vh;
 }
 
 .DescClient {
@@ -518,8 +519,16 @@ svg {
     flex-direction: column;
 }
 
+.SvgFaq {
+    fill:blue;
+    filter: none
+}
+
 .btn-Email {
-    background-color: #db2bca !important;
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
 }
 
 .BusinessHourTitle {
@@ -539,13 +548,13 @@ svg {
 }
 
 /* Animation */
-.mySwiper,.PricingTitle,.OneTime,.WeekTime,.Profile,.ContMoveOut,.FAQsTitle,.animateCard,.TestiTitle,.ContainerReview,.BeforeAfterChild {
+.PricingTitle,.OneTime,.WeekTime,.Profile,.ContMoveOut,.FAQsTitle,.animateCard,.TestiTitle,.ContainerReview,.BeforeAfterChild {
     filter: opacity(0);
 }
 
 @media only screen and (max-width: 768px) {
     /* Animation */
-    .mySwiper,.PricingTitle,.OneTime,.WeekTime,.Profile,.ContMoveOut,.FAQsTitle,.animateCard,.TestiTitle,.ContainerReview,.BeforeAfterChild {
+    .PricingTitle,.OneTime,.WeekTime,.Profile,.ContMoveOut,.FAQsTitle,.animateCard,.TestiTitle,.ContainerReview,.BeforeAfterChild {
         filter: opacity(1);
     }
     
@@ -564,10 +573,6 @@ svg {
     
     .TablePayment tr {
         margin-bottom: 2vh;
-    }
-    
-    .TablePayment,.ExtraDetail {
-        font-size: 0.8em;
     }
     
     .LittleTitle {
@@ -590,10 +595,6 @@ svg {
         text-align: left !important;     
     }
     
-    .SubPricingTitle, .SubFAQsTitle, .SubTestiTitle {
-        font-size: 1.85vh;
-    }
-    
     .PicHolder, .PicDesc {
         width: 100% !important;
     }
@@ -607,9 +608,6 @@ svg {
         justify-content: center;
     }
     
-    .PicDetails {
-        font-size: 1.45vh;    
-    }
     
     .headerService {
         text-align: left;
@@ -627,6 +625,26 @@ svg {
     .OneTime, .WeekTime, .ContMoveOut {
         width: 100%;
         margin-top: 5vh;
+    }
+    
+    .PicDesc {
+        font-size: 1.75vh !important;
+    }
+
+    .AbText, .TablePayment, .LittleTitle, .btn-link, .card-body, .ClientComment {
+        font-size: 1.5vh !important;
+    }
+
+    .SubFAQsTitle,.SubPricingTitle,.SubTestiTitle{
+        font-size: 1.75vh !important;
+    }
+
+    .FAQsTitle, .PricingTitle, .TestiTitle,.AbTitle {
+        font-size: 2.25vh;
+    }
+
+    .SvgFaq {
+        width: 7% !important;
     }
     
     .Benefits {
@@ -713,10 +731,6 @@ svg {
         margin-top: 3vh;
     }
     
-    .PricingTitle,.FAQsTitle, .TestiTitle {
-        font-size: 1.35em;
-    }
-    
     .card {
         margin: 2vh 0;
     }
@@ -729,7 +743,6 @@ svg {
     
     button.btn-link,.card-body {
         text-align: left !important;
-        font-size: 0.9em;
     }
     
     .navbar-brand {
@@ -744,10 +757,6 @@ svg {
         padding: 1vh 2vh !important;
     }
     
-    .AbText {
-        font-size: 0.9em;
-    }
-    
     .CleanOverlay {
         display: block;    
     }
@@ -758,9 +767,5 @@ svg {
     
     .CleanPic,.CleanOverlay {
         height: 75%;
-    }
-    
-    .DetailSect, .LocationSect {
-        font-size: 0.9em;
     }
 }
