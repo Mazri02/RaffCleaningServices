@@ -794,7 +794,9 @@ svg {
     }
     
     .CleanPic {
-        background-image: none;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        color: white;
+        background-image: url(https://images.pexels.com/photos/4099469/pexels-photo-4099469.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     }
     
     .CleanPic,.CleanOverlay {
