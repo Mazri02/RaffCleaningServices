@@ -153,7 +153,7 @@ body {
     justify-content: center;
 }
 
-.PicDesc {
+.PicDesc,.AbTitle {
     font-size: 2.05vh !important;
 }
 
@@ -165,8 +165,11 @@ body {
     font-size: 3vh !important;
 }
 
-.FAQsTitle, .PricingTitle, .TestiTitle,.AbTitle {
+.FAQsTitle, .PricingTitle, .TestiTitle {
     font-size: 4vh;
+    padding: 10vh 3vh;
+    border-radius: 5vh;
+    color: white;
 }
 
 .Services {
@@ -478,7 +481,6 @@ svg {
     width: 100%;
     margin: 2vh 0;
     padding: 3vh 5vh; 
-    border: 1px solid black;
     border-radius: 5vh;
     box-shadow: 0px 0px 22px 4px rgba(0,0,0,0.10);
     height: 100%;
@@ -510,6 +512,25 @@ svg {
 
 .ClientComment {
     margin: 2vh 0 !important;
+}
+
+.PricingTitle {
+    background-image: url(https://images.pexels.com/photos/6195111/pexels-photo-6195111.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+
+.FAQsTitle {
+    background-image: url(https://images.pexels.com/photos/4099467/pexels-photo-4099467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-position: center !important;
+}
+
+.TestiTitle {
+    background-image: url(https://images.pexels.com/photos/6195275/pexels-photo-6195275.jpeg);
+}
+
+.PricingTitle,.FAQsTitle, .TestiTitle {
+    background-size: cover;
+    background-position: bottom;
+    filter: opacity(0.1);
 }
 
 .DescClient {
@@ -560,6 +581,15 @@ svg {
     
     .CompressTd {
         display: block;
+    }
+    
+    .PricingTitle,.FAQsTitle, .TestiTitle {
+        margin: 0;
+    }
+    
+    .container {
+        margin: 0 !important;
+        padding: 0 !important;
     }
     
   /* For mobile phones: */
@@ -627,7 +657,7 @@ svg {
         margin-top: 5vh;
     }
     
-    .PicDesc {
+    .PicDesc,.AbTitle {
         font-size: 1.75vh !important;
     }
 
@@ -639,7 +669,7 @@ svg {
         font-size: 1.75vh !important;
     }
 
-    .FAQsTitle, .PricingTitle, .TestiTitle,.AbTitle {
+    .FAQsTitle, .PricingTitle, .TestiTitle {
         font-size: 2.25vh;
     }
 
