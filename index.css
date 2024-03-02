@@ -631,7 +631,7 @@ svg {
         font-size: 1.75vh !important;
     }
 
-    .AbText, .TablePayment, .LittleTitle, .btn-link, .card-body, .ClientComment {
+    .AbText, .TablePayment, .LittleTitle, .btn-link, .card-body, .ClientComment, .DetailSect, .LocationSect {
         font-size: 1.5vh !important;
     }
 
