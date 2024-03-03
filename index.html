@@ -256,8 +256,8 @@
                 </table>
             </span>
         </div>
-    </div>
-
+        
+        
     <div class="container Benefits" id="Benefits">
         <div class="BenIcon d-flex">
             <div class="Profile P0">
@@ -290,6 +290,7 @@
             </div>
         </div>
     </div>
+    </div>
 
     <div class="container FAQs" id='FAQs'>
         <div class="FAQsTitle">
@@ -308,7 +309,7 @@
                     </h5>
                 </div>
 
-                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
                         You can contact us via Instagram,WhatsApp or Email and give us your credential as listed below :-
                         <ul>
@@ -334,7 +335,7 @@
                         </button>
                     </h5>
                 </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
                     <div class="card-body">
                         You may proceed with the cancellation or reschedule but do remind us 4 hours before the appointment, For the convenience of our staff and for the sake of saving our resources
                     </div>
@@ -348,7 +349,7 @@
 </svg> Can I lower Service Rates if I use my own Cleaning Product?
                     </button>
                 </div>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordion">
                     <div class="card-body">
                         We would happily use your preffered cleaning product if you can provide them. Should you need us to bring our cleaning supplies, there would be additional charges that will be quoted upon your request.
                     </div>
@@ -362,7 +363,7 @@
 </svg> Where do I make a report if a Misconduct or Theft happens during services?
                     </button>
                 </div>
-                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                <div id="collapseFour" class="collapse show" aria-labelledby="headingFour" data-parent="#accordion">
                     <div class="card-body">
                         If there are any issues or serious misconduct risen among our employees, feel free to report and give your feedback to us through Whatsapp (011-54114183). Your Comfort is our priority, any kind of misbehaviour that happens among our staff will be heavily punished by the law accordingly.
                     </div>
@@ -377,7 +378,7 @@
 </svg> What if I am not happy with the Cleaning Result?
                     </button>
                 </div>
-                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                <div id="collapseFive" class="collapse show" aria-labelledby="headingFive" data-parent="#accordion">
                     <div class="card-body">
                         If there are any dissatisfaction of our cleaning results, kindly inform us while we are at the premises for us to solve it immediately. Or if you notice any part that is considered not clean enough, then feel free to snap the picture of the environment and sent it to us. We will be more than happy to solve it for you.
                     </div>
@@ -535,11 +536,11 @@
         if($(window).width() > 768){
             $(this).scroll(function() {
             var currentOffset = $(window).scrollTop();
-            var SwiperOffset = parseInt($('.mySwiper').offset().top - 200)
+            var SwiperOffset = parseInt($('.mySwiper').offset().top - 300)
             var PricingOffset = parseInt($('.PricingTitle').offset().top - 200)
-            var BenIconOffset = parseInt($('.BenIcon').offset().top - 200)
-            var FAQsOffset = parseInt($('.FAQs').offset().top - 200)
-            var TestiTitleOffset = parseInt($('.TestiTitle').offset().top - 200)
+            var BenIconOffset = parseInt($('.BenIcon').offset().top - 300)
+            var FAQsOffset = parseInt($('.FAQs').offset().top - 300)
+            var TestiTitleOffset = parseInt($('.TestiTitle').offset().top - 300)
 
 //            if (currentOffset >= SwiperOffset) {
 //                $('.mySwiper').addClass('animate__animated animate__fadeInRight')
@@ -551,11 +552,11 @@
 //            }
 
             var timer = 0;
-            if (currentOffset >= PricingOffset) {
+            if (currentOffset >= SwiperOffset) {
                 
-                $('.PricingTitle').addClass('animate__animated animate__fadeInUp')
-                $('.PricingTitle').removeClass('animate__fadeOutDown')
-                $('.PricingTitle').css("filter", "opacity(1)")
+                $('.Pricing').addClass('animate__animated animate__fadeInUp')
+                $('.Pricing').removeClass('animate__fadeOutDown')
+                $('.Pricing').css("filter", "opacity(1)")
                 $('.OneTime').addClass('animate__animated animate__fadeInLeft')
                 $('.WeekTime').addClass('animate__animated animate__fadeInRight')
                 $('.ContMoveOut').addClass('animate__animated animate__fadeInUp')
@@ -567,6 +568,7 @@
                 $('.WeekTime').removeClass('animate__fadeOutRight')
                 $('.ContMoveOut').removeClass('animate__fadeOutDown')
                 $('.Profile').removeClass('animate__fadeOutRight');
+                $('.BenIcon').css('filter','opacity(1)')
 
                 for (var x = 0; x < $('.Profile').length; x++) {
                     (function (index) {
@@ -587,10 +589,11 @@
                 $('.ContMoveOut').removeClass('animate__fadeInUp')
                 $('.OneTime').addClass('animate__fadeOutLeft')
                 $('.WeekTime').addClass('animate__fadeOutRight')
-                $('.PricingTitle').removeClass('animate__fadeInUp')
-                $('.PricingTitle').addClass('animate__fadeOutDown')
+                $('.Pricing').removeClass('animate__fadeInUp')
+                $('.Pricing').addClass('animate__fadeOutDown')
                 $('.ContMoveOut').addClass('animate__fadeOutDown')
                 $('.Profile').removeClass('animate__fadeInRight');
+                $('.BenIcon').css('filter','opacity(0)')
                 
                 for (var x = 0; x < $('.Profile').length; x++) {
                     (function (index) {
@@ -607,10 +610,10 @@
                 }
             }
             
-            if(currentOffset > FAQsOffset){
-                $('.FAQsTitle').addClass('animate__animated animate__fadeInUp')
-                $('.FAQsTitle').removeClass('animate__fadeOutDown')
-                $('.FAQsTitle').css('filter','opacity(1)')
+            if(currentOffset > PricingOffset){
+                $('.FAQs').addClass('animate__animated animate__fadeInUp')
+                $('.FAQs').removeClass('animate__fadeOutDown')
+                $('.FAQs').css('filter','opacity(1)')
                 
                 for (var x = 0; x < $('.animateCard').length; x++) {
                     (function (index) {
@@ -626,8 +629,8 @@
                     })(x);
                 }
             } else {
-                $('.FAQsTitle').removeClass('animate__fadeInUp')
-                $('.FAQsTitle').addClass('animate__fadeOutDown')
+                $('.FAQs').removeClass('animate__fadeInUp')
+                $('.FAQs').addClass('animate__fadeOutDown')
                 $('.animateCard').removeClass('animate__fadeInRight');
                 
                 for (var x = 0; x < $('.animateCard').length; x++) {
@@ -646,11 +649,11 @@
                 }
             }
             
-            if(currentOffset >= TestiTitleOffset){
-                $('.TestiTitle').addClass('animate__animated animate__fadeInUp')
-                $('.TestiTitle').removeClass('animate__fadeOutDown')
+            if(currentOffset >= FAQsOffset){
+                $('.TestCont').addClass('animate__animated animate__fadeInUp')
+                $('.TestCont').removeClass('animate__fadeOutDown')
                 $('.ContainerReview').removeClass('animate__fadeOutLeft');
-                $('.TestiTitle').css('filter','opacity(1)')
+                $('.TestCont').css('filter','opacity(1)')
 
                 for (var x = 0; x < $('.ContainerReview').length; x++) {
                     (function (index) {
@@ -682,8 +685,8 @@
                     })(x);
                 }
             } else {
-                $('.TestiTitle').removeClass('animate__fadeInUp')
-                $('.TestiTitle').addClass('animate__fadeOutDown')
+                $('.TestCont').removeClass('animate__fadeInUp')
+                $('.TestCont').addClass('animate__fadeOutDown')
                 $('.ContainerReview').removeClass('animate__fadeInLeft');
                 
                 for (var x = 0; x < $('.ContainerReview').length; x++) {

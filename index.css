@@ -30,6 +30,7 @@ html {
 
 body {
     overflow-x: hidden;
+    background-color: #444243 !important;
 }
 
 /* width */
@@ -54,9 +55,9 @@ body {
 }
 
 .CleanPic {
-    background-image: url(Image/About_Us.jpg);
     height: 85%;
     width: 100%;
+    background-image: url(Image/About_Us.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -91,17 +92,18 @@ body {
 
 .BenIcon {
     justify-content: center;
+    background-color: white;
+    padding-bottom: 3vh;
 }
 
 .Profile {
 /*    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.15);*/
     width: 20%;
-    margin: 0 2vh;
     display: flex;
     padding: 2vh;
     flex-direction: column;
     justify-content: center;
-    border-radius: 15vh;
+    background-color: white;
     align-items: center;
 }
 
@@ -121,7 +123,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
-    height: 10vh;
+    height: 8vh;
     filter: opacity(100%);
 }
 
@@ -169,7 +171,6 @@ body {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     font-size: 4vh;
     padding: 10vh 3vh;
-    border-radius: 5vh;
     color: white;
 }
 
@@ -179,8 +180,11 @@ body {
     align-items: center !important;
     width: 100%;
     height: 70%;
+    background: transparent;
+/*
     background: rgb(255, 255, 255);
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(221,220,218,1) 50%, rgba(194,194,196,1) 100%);
+*/
 
 }
 
@@ -293,11 +297,25 @@ body {
     width: 100%;
 }
 
+.BenIcon {
+    box-shadow: 0px 7px 30px 4px rgba(0, 0, 0, 0) !important;
+}
+
+.BenIcon,.Pricing,.TestCont,.FAQs {
+    border-radius: 2vh !important;
+    background-color: white !important;
+    box-shadow: 0px 7px 30px 4px rgba(0, 0, 0, 0.45);
+}
+
+.container{
+    padding: 0 !important;
+}
+
 .PricingTitle,.FAQsTitle, .TestiTitle {
     text-align: center;
     font-weight: bold;
-    margin: 3vh;
     display: flex;
+    border-radius: 2vh 2vh 0 0;
     flex-direction: column;
 }
 
@@ -309,6 +327,7 @@ body {
     width: 70% !important;
     display: flex;
     flex-direction: column;
+    margin: 5vh auto 5vh auto;
 }
 
 .CollapseBtn {
@@ -331,7 +350,7 @@ button.btn-link {
 .Testimonial {
     display: flex;
     justify-content: center;
-    margin-top: 4vh;
+    margin: 4vh;
 }
 
 .TestCont {
@@ -529,9 +548,7 @@ svg {
 
 .PricingTitle,.FAQsTitle, .TestiTitle {
     background-size: cover;
-    background-attachment: fixed;
     background-position: bottom;
-    filter: opacity(0.1);
 }
 
 .DescClient {
@@ -570,18 +587,22 @@ svg {
 }
 
 /* Animation */
-.PricingTitle,.OneTime,.WeekTime,.Profile,.ContMoveOut,.FAQsTitle,.animateCard,.TestiTitle,.ContainerReview,.BeforeAfterChild {
+.Pricing,.OneTime,.WeekTime,.Profile,.ContMoveOut,.FAQs,.animateCard,.TestCont,.ContainerReview,.BeforeAfterChild,.BenIcon {
     filter: opacity(0);
 }
 
 @media only screen and (max-width: 768px) {
     /* Animation */
-    .PricingTitle,.OneTime,.WeekTime,.Profile,.ContMoveOut,.FAQsTitle,.animateCard,.TestiTitle,.ContainerReview,.BeforeAfterChild {
+    .Pricing,.OneTime,.WeekTime,.Profile,.ContMoveOut,.FAQs,.animateCard,.TestCont,.ContainerReview,.BeforeAfterChild,.BenIcon {
         filter: opacity(1);
     }
     
     .CompressTd {
         display: block;
+    }
+    
+    body {
+        background-color: white !important;
     }
     
     .PricingTitle,.FAQsTitle, .TestiTitle {
@@ -790,13 +811,17 @@ svg {
     }
     
     .CleanOverlay {
+        width: 100%;
+        background-position: center;
+        background-size: cover;
         display: block;    
+        filter: opacity(0.25);
+        background-image: url(https://images.pexels.com/photos/4099469/pexels-photo-4099469.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     }
     
     .CleanPic {
-        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-        color: white;
-        background-image: url(https://images.pexels.com/photos/4099469/pexels-photo-4099469.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+        color: black;
+        background-image: none;
     }
     
     .CleanPic,.CleanOverlay {
