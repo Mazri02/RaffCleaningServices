@@ -563,6 +563,48 @@ svg {
     filter: none
 }
 
+.ContactButton {
+    padding: 3vh !important;
+    background-color: #e62e2d;
+    border: 0px !important;
+    font-weight: bold;
+    color:white;
+    border-radius: 4vh;
+    width: 60%;
+    margin-left: auto;
+}
+
+.ContactButton svg {
+    filter: invert(0);
+}
+
+.ListContact {
+    display: flex;
+    flex-direction: column;
+}
+
+.ListContact button {
+    filter: opacity(0);
+    width: 25%;
+    padding: 3vh !important;
+    margin: 1vh 0;
+    margin-left: auto !important;
+}
+
+.ListContact button svg {
+    height: 10%;
+    width: 50%;
+}
+
+.ButtonList {
+    position: fixed;
+    bottom: 3vh;
+    right: 3vh;
+    display: flex;
+    flex-direction: column-reverse;
+    z-index: 10;
+}
+
 .btn-Email {
     background: #f09433; 
     background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
@@ -817,6 +859,25 @@ svg {
         display: block;    
         filter: opacity(0.25);
         background-image: url(https://images.pexels.com/photos/4099469/pexels-photo-4099469.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    }
+    
+    .ContactButtonText {
+        display: none;
+    }
+    
+    .ContactButton svg, .ListContact button svg{
+        width: 85%;
+        height: 50%;
+    }
+    
+    .ListContact button {
+        padding: 0 !important;
+        width: 20% !important;
+    }
+    
+    .ContactButton {
+        width: 20%;
+        padding: 2vh !important;
     }
     
     .CleanPic {
