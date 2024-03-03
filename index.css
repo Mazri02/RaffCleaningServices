@@ -570,11 +570,12 @@ svg {
     font-weight: bold;
     color:white;
     border-radius: 4vh;
-    width: 60%;
+    width: 40%;
     margin-left: auto;
 }
 
 .ContactButton svg {
+    width: 10%;
     filter: invert(0);
 }
 
@@ -585,7 +586,7 @@ svg {
 
 .ListContact button {
     filter: opacity(0);
-    width: 25%;
+    width: 15%;
     padding: 3vh !important;
     margin: 1vh 0;
     margin-left: auto !important;
@@ -593,7 +594,7 @@ svg {
 
 .ListContact button svg {
     height: 10%;
-    width: 50%;
+    width: 60%;
 }
 
 .ButtonList {
